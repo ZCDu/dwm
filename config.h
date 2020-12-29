@@ -35,8 +35,8 @@ static const char *colors[][3]      = {
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+	[SchemeNorm] = { OPAQUE, 0xd0, OPAQUE },
+	[SchemeSel]  = { OPAQUE, 0xd0, OPAQUE },
 };
 
 /* tagging */
@@ -80,7 +80,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucmd[] = {"dmenu_run",NULL};
 static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[]  = { "chromium", NULL };
+static const char *browsercmd[]  = { "chromium-web-browser", NULL };
 
 static const char *upvol[]   = { "/home/zcdu/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/zcdu/scripts/vol-down.sh",  NULL };
@@ -100,7 +100,6 @@ static Key keys[] = {
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_a,                    spawn,          {.v = alacrittycmd } },
-	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ControlMask,  XK_s,                    spawn,          {.v = sktogglecmd } },
 	{ 0,                   XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0,                   XF86XK_AudioMute,        spawn,          {.v = mutevol } },
