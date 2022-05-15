@@ -17,7 +17,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=12" };
+static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=20" };
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=25";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -98,6 +98,7 @@ static const char *browsercmd[]  = { "google-chrome", NULL };
 static const char *upvol[]   = { "/home/zcdu/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/zcdu/scripts/vol-down.sh",  NULL };
 static const char *mutevol[] = { "/home/zcdu/scripts/vol-toggle.sh",  NULL };
+static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
 
 static const char *wpcmd[]  = { "/home/zcdu/scripts/wp-change.sh", NULL };
 static const char *sktogglecmd[]  = { "/home/zcdu/scripts/sck-tog.sh", NULL };
@@ -114,6 +115,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_a,                    spawn,          {.v = alacrittycmd } },
 	{ MODKEY|ControlMask,  XK_s,                    spawn,          {.v = sktogglecmd } },
+	{ MODKEY,              XK_q,                    spawn,          {.v = flameshotcmd } },
 	{ 0,                   XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0,                   XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                   XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
