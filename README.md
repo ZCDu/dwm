@@ -32,6 +32,7 @@ Patches applied
 - [dwm-r1522-viewontag.diff](https://dwm.suckless.org/patches/viewontag/)
 - [dwm-rotatestack-20161021-ab9571b.diff](https://dwm.suckless.org/patches/rotatestack/)
 - [dwm-vanitygaps-20190508-6.2.diff](https://dwm.suckless.org/patches/vanitygaps/)
+- accessnthoon.diff : it is patched, though it dont at my patches file
 
 
 Running dwm
