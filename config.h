@@ -17,8 +17,9 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=20" };
-static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=25";
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=20",
+                                      "Noto Emoji Nerd Font Complete Mono:pixelsize=30" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:size=25";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -97,18 +98,18 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "google-chrome", NULL };
 static const char *firebrowsercmd[]  = { "firefox", NULL };
 
-static const char *upvol[]   = { "/home/zcdu/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/zcdu/scripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/zcdu/scripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "/home/zcdu/software/dwmscripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/zcdu/software/dwmscripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "/home/zcdu/software/dwmscripts/vol-toggle.sh",  NULL };
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
 
-static const char *wpcmd[]  = { "/home/zcdu/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/zcdu/scripts/sck-tog.sh", NULL };
+static const char *wpcmd[]  = { "/home/zcdu/software/dwmscripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "/home/zcdu/software/dwmscripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *alacrittycmd[] = {"gnome-terminal", NULL};
 
-static const char *suspendcmd[]  = { "/home/zcdu/scripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "/home/zcdu/software/dwmscripts/suspend.sh", NULL };
 
 static Key keys[] = {
 	/* modifier            key                      function        argument */
@@ -130,7 +131,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    XK_b,                    rotatestack,    {.i = -1 } },
 	{ MODKEY,              XK_e,                    focusstack,     {.i = +1 } },
 	{ MODKEY,              XK_b,                    focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,    XK_h,                    incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,    XK_h,                    incnmaster,     {.i = +1 } }, // 调整为左右分屏的形式
 	{ MODKEY|ShiftMask,    XK_l,                    incnmaster,     {.i = -1 } },
 	{ MODKEY,              XK_h,                    setmfact,       {.f = -0.05} },
 	{ MODKEY,              XK_l,                    setmfact,       {.f = +0.05} },
