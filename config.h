@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 16;       /* snap pixel , tagbar size */
+static const unsigned int snap      = 10;       /* snap pixel , tagbar size */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -17,7 +17,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Hack Nerd Font Mono:size=20",
+static const char *fonts[]          = { "Hack Nerd Font Mono:size=25",
                                       "Noto Emoji Nerd Font Complete Mono:pixelsize=30" };
 static const char dmenufont[]       = "Hack Nerd Font Mono:size=25";
 static const char col_gray1[]       = "#222222";
