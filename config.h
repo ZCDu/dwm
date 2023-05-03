@@ -3,7 +3,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel , tagbar size */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -65,17 +65,17 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "Tile",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ "[@]",      spiral },                 
-	{ "[\\]",     dwindle },                
-	{ "H[]",      deck },                   
-	{ "TTT",      bstack },                 
-	{ "===",      bstackhoriz },            
+	{ "[M]",      monocle }, 
+	{ "[@]",      spiral },          
+	{ "[\\]",     dwindle },   
+	{ "H[]",      deck },               
+	{ "TTT",      bstack },              
+	{ "===",      bstackhoriz },           
 	{ "HHH",      grid },                   
 	{ "###",      nrowgrid },               
 	{ "---",      horizgrid },              
 	{ ":::",      gaplessgrid },            
-	{ "|M|",      centeredmaster },         
+	{ "|M|",      centeredmaster },      
 	{ ">M>",      centeredfloatingmaster }, 
 };
 
@@ -95,21 +95,21 @@ static const Layout layouts[] = {
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL }; 
 static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[]  = { "google-chrome", NULL };
+static const char *browsercmd[]  = { "microsoft-edge-dev", NULL };
 static const char *firebrowsercmd[]  = { "firefox", NULL };
 
-static const char *upvol[]   = { "/home/zcdu/software/dwmscripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/zcdu/software/dwmscripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/zcdu/software/dwmscripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "/home/zcdu/.dwmscripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/zcdu/.dwmscripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "/home/zcdu/.dwmscripts/vol-toggle.sh",  NULL };
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
 
-static const char *wpcmd[]  = { "/home/zcdu/software/dwmscripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/zcdu/software/dwmscripts/sck-tog.sh", NULL };
+static const char *wpcmd[]  = { "/home/zcdu/.dwmscripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "/home/zcdu/.dwmscripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *alacrittycmd[] = {"gnome-terminal", NULL};
 
-static const char *suspendcmd[]  = { "/home/zcdu/software/dwmscripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "/home/zcdu/.dwmscripts/suspend.sh", NULL };
 
 static Key keys[] = {
 	/* modifier            key                      function        argument */
@@ -141,10 +141,10 @@ static Key keys[] = {
 	{ MODKEY,              XK_Tab,                  view,           {0} },
 	{ MODKEY|ShiftMask,    XK_q,                    killclient,     {0} },
 	{ MODKEY,              XK_t,                    setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,              XK_n,                    setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,              XK_n,                    setlayout,      {.v = &layouts[11]} },
 	{ MODKEY,              XK_m,                    setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,              XK_r,                    setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask,    XK_r,                    setlayout,      {.v = &layouts[12]} },
+	{ MODKEY|ShiftMask,    XK_r,                    setlayout,      {.v = &layouts[13]} },
 	{ MODKEY|ShiftMask,    XK_f,                    fullscreen,     {0} },
 	{ MODKEY|ShiftMask,    XK_space,                togglefloating, {0} },
 	{ MODKEY,              XK_w,                    togglescratch,  {.v = scratchpadcmd } },

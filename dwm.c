@@ -1782,7 +1782,7 @@ run(void)
 void
 runAutostart(void) {
 	//system("cd ~/scripts; ./autostart_blocking.sh");
-	system("cd ~/software/dwmscripts; ./autostart.sh &");
+	system("cd ~/.dwmscripts; ./autostart.sh &");
 }
 
 void
