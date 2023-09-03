@@ -23,6 +23,8 @@ static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=15",
 //                                       "Noto Emoji Nerd Font Complete Mono:pixelsize=20" };
 
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=15";
+// theme color setup
+#include "themes/onedark.h"
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -46,6 +48,9 @@ static const unsigned int alphas[][3]      = {
 /* tagging */
 static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
+/* eww */
+static const char* eww[] = { "eww", "open" , "eww", NULL };
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -54,6 +59,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+  { "eww",      NULL,       NULL,       0,            0,           1,           -1 },
 };
 
 /* layout(s) */
